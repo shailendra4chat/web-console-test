@@ -1,0 +1,33 @@
+{
+  "name": "dashboard-automation-app",
+  "description": "Dashboard Automation App",
+  "author": "Shailendra Singh <shailendra.4.singh@atos.net>",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cypress open",
+    "test": "npm-run-all -s -c end2end report:* view",
+    "end2end": "cypress run --headless",
+    "report:merge": "mochawesome-merge /e2e/cypress/results/json/*.json > /e2e/cypress/results/mochawesome-bundle.json",
+    "report:generate": "marge /e2e/cypress/results/mochawesome-bundle.json -o /e2e/cypress/reports/html",
+    "report:rename": "node /e2e/server/rename.js",
+    "report:move": "mv /e2e/cypress/reports/html/*.html /e2e/reports/",
+    "report:copy": "cp -r /e2e/public/* /e2e/reports/",
+    "view": "node /e2e/server/app.js"
+  },
+  "dependencies": {
+    "cypress": "6.2.1",
+    "cypress-multi-reporters": "1.4.0",
+    "express": "4.17.1",
+    "js-cookie": "^2.2.1",
+    "mocha": "8.2.1",
+    "mochawesome": "6.2.1",
+    "mochawesome-merge": "4.2.0",
+    "mochawesome-report-generator": "5.1.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "engines": {
+    "node": "12.16.1",
+    "npm": "6.13.4"
+  }
+}

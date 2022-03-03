@@ -1,0 +1,2 @@
+positiveTestMessage truemessage
+negativeTestMessage falsemessage

@@ -1,0 +1,13 @@
+{  
+  "pluginsFile": "cypress/plugins/index.js",
+  "supportFile": false,
+  "fixturesFolder": false,
+  "experimentalFetchPolyfill": true,
+  "screenshotOnRunFailure": false,
+  "video": false,
+  "responseTimeout": 35000,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
+}

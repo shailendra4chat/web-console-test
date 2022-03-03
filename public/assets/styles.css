@@ -1,0 +1,42 @@
+@import "bootstrap.min.css";
+
+body {
+  font: 14px/16px normal #333333;
+  background-color: #f2f7f8;
+}
+
+
+header {
+  background-color: #0178bc;
+  padding: 20px 50px;
+}
+
+section{
+  padding: 20px 50px;
+}
+
+.title{
+    font-size: 20px;
+    list-style: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.heading{
+    font-size: 18px;
+    padding: 20px 0;
+    color: #58575c;
+}
+
+ul{
+  padding: 0 70px;
+}
+
+li{
+  font-size: 18px;
+  padding: 5px;
+}
+
+li:first-child {
+  font-weight: bold;
+}

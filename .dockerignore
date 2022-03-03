@@ -1,0 +1,13 @@
+/node_modules
+/cypress/results
+/cypress/reports
+
+.vscode
+debug.log
+npm-debug.log
+
+/client/node_modules
+/client/public
+/client/src
+/client/package.json
+/client/package-lock.json
