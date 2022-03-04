@@ -1,5 +1,5 @@
 #
-#    Dashboard Automation App
+#    Dashboard Automation Reports App
 #
 
 version: '3'
@@ -7,7 +7,7 @@ version: '3'
 services:
 
   #############################################################################
-  # Users Service
+  # Automation Reports Service
   #############################################################################
   dashboard-automation-app:
     image: "dashboard-automation-app:latest"

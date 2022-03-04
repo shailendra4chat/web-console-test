@@ -1,2 +1,0 @@
-positiveTestMessage truemessage
-negativeTestMessage falsemessage

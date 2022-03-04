@@ -1,4 +1,4 @@
-# Edge Container Platform - Console Automation Application
+# Dashboard Automation Reports App
 
 ### Environment Variables:
 ```

@@ -1,19 +1,31 @@
 {
   "name": "dashboard-automation-app",
-  "description": "Dashboard Automation App",
+  "description": "Dashboard Automation Reports App",
   "author": "Shailendra Singh <shailendra.4.singh@atos.net>",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "cypress open",
-    "test": "npm-run-all -s -c end2end report:* view",
+    "head": "cypress open",
+    "dev": "npm-run-all -s -c end2end dev:* view:dev",
+    "test": "npm-run-all -s -c end2end report:* view:report",
+
     "end2end": "cypress run --headless",
+    
+    "dev:merge": "mochawesome-merge cypress/results/json/*.json > cypress/results/mochawesome-bundle.json",
+    "dev:generate": "marge cypress/results/mochawesome-bundle.json -o cypress/reports/html",    
+    "dev:mv": "mv cypress/reports/html/cypress/results/mochawesome-bundle.html cypress/reports/html/mochawesome-bundle.html",
+    "dev:rm": "rm cypress/reports/html/cypress -rf",    
+    "dev:rename": "node server/rename.js",
+    "dev:move": "mv cypress/reports/html/*.html reports/",
+    "dev:copy": "cp -r public/* reports/",
+    "view:dev": "node server/app.js",
+    
     "report:merge": "mochawesome-merge /e2e/cypress/results/json/*.json > /e2e/cypress/results/mochawesome-bundle.json",
     "report:generate": "marge /e2e/cypress/results/mochawesome-bundle.json -o /e2e/cypress/reports/html",
     "report:rename": "node /e2e/server/rename.js",
     "report:move": "mv /e2e/cypress/reports/html/*.html /e2e/reports/",
     "report:copy": "cp -r /e2e/public/* /e2e/reports/",
-    "view": "node /e2e/server/app.js"
+    "view:report": "node /e2e/server/app.js"
   },
   "dependencies": {
     "cypress": "6.2.1",
