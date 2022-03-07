@@ -7,7 +7,7 @@
   "scripts": {
     "open": "cypress open",
     "dev": "npm-run-all -s -c end2end dev:* view:dev",
-    "test": "npm-run-all -s -c end2end test:* view:report",
+    "test": "npm-run-all -s -c end2end test:* view:test",
     "end2end": "cypress run --headless",
     
     "dev:merge": "mochawesome-merge cypress/results/json/*.json > cypress/results/mochawesome-bundle.json",
