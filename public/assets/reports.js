@@ -13,7 +13,8 @@ $( document ).ready(function() {
         $('#reports .list li').remove();
 
         $.each(reports, function(index, report) {
-            let reportName = report.split('.').slice(0, -1).join('.'); // Removed extension from the filename
+            let reportName = report.split("_").pop() // Remove underscore before name
+            reportName = reportName.split('.').slice(0, -1).join('.'); // Removed extension from the filename
 
             $('#reports .list').append('<li class=list-group-item><a href=' + report + '>'+reportName+'</a></li>');
         });
