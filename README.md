@@ -2,6 +2,7 @@
 
 ### Environment Variables:
 ```
+XDG_CONFIG_HOME=/appData    // To run cypress in container
 DASHBOARD_AUTOMATION_APP_PORT // => e.g. 4000
 DASHBOARD_APP_URL
 
